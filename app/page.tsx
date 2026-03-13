@@ -1,7 +1,6 @@
 "use client";
-
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, BookOpen, Brain, Zap } from "lucide-react";
+import { ArrowRight, BellRing, BookOpen, Brain, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,14 +29,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/main-penguin.png"
+              src="/images/main.png"
               alt="BrainGuin Logo"
-              width={40}
-              height={40}
+              width={60}
+              height={60}
               className="object-contain"
             />
             <Image
-              src="/images/logo-text.png"
+              src="/images/icon-text-light.png"
               alt="BrainGuin"
               width={120}
               height={30}
@@ -64,7 +63,7 @@ export default function Home() {
       </header>
 
       {/* --- HERO SECTION --- */}
-      <section className="pt-40 pb-20 px-6 max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-16">
+      <section className="pt-34 pb-20 px-6 max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-16">
         <motion.div
           className="flex-1 text-center lg:text-left"
           initial="hidden"
@@ -90,9 +89,9 @@ export default function Home() {
             variants={fadeUp}
             className="text-lg md:text-xl text-text-muted mb-10 max-w-2xl mx-auto lg:mx-0"
           >
-            Upload any massive PDF, link, or topic. BrainGuin instantly
-            generates a custom deck of flashcards and builds a daily study
-            schedule so you never forget a fact.
+            Upload any massive Document, link, or paste a topic. BrainGuin
+            instantly generates a custom deck of flashcards and builds a daily
+            study schedule so you never forget a fact.
           </motion.p>
           <motion.div
             variants={fadeUp}
@@ -114,33 +113,30 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Background decoration */}
-          <div className="absolute w-[120%] h-[120%] bg-accent/5 rounded-full blur-3xl -z-10" />
-
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="absolute left-0 md:left-10 z-10 w-[240px] drop-shadow-2xl"
+            className="absolute left-0 md:left-10 z-10 w-[240px]"
           >
             <Image
-              src="/images/screen-1.png"
+              src="/images/2.png"
               alt="Dashboard Screen"
               width={300}
               height={600}
-              className="rounded-[40px] border-[6px] border-white"
+              className="rounded-[40px]"
             />
           </motion.div>
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-            className="absolute right-0 md:right-10 z-20 w-[260px] top-10 drop-shadow-2xl"
+            className="absolute right-0 md:right-10 z-20 w-[260px] top-10"
           >
             <Image
-              src="/images/screen-2.png"
+              src="/images/3.png"
               alt="Study Screen"
               width={300}
               height={600}
-              className="rounded-[40px] border-[6px] border-white"
+              className="rounded-[40px]"
             />
           </motion.div>
         </motion.div>
@@ -170,7 +166,7 @@ export default function Home() {
             >
               <div className="flex-1 flex justify-center">
                 <Image
-                  src="/images/pdf-penguin.png"
+                  src="/images/pdf.png"
                   alt="Upload Anything"
                   width={350}
                   height={350}
@@ -202,7 +198,7 @@ export default function Home() {
             >
               <div className="flex-1 flex justify-center">
                 <Image
-                  src="/images/nerd-penguin.png"
+                  src="/images/smarter.png"
                   alt="Smart Flashcards"
                   width={350}
                   height={350}
@@ -234,10 +230,10 @@ export default function Home() {
             >
               <div className="flex-1 flex justify-center">
                 <Image
-                  src="/images/time-penguin.png"
+                  src="/images/processor.png"
                   alt="Pacing"
-                  width={350}
-                  height={350}
+                  width={310}
+                  height={310}
                   className="object-contain drop-shadow-xl"
                 />
               </div>
@@ -257,6 +253,98 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* --- WIDGETS & NOTIFICATIONS SECTION --- */}
+      <section className="py-24 bg-page relative overflow-hidden border-t border-black/5">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
+          <motion.div
+            className="flex-1 text-center lg:text-left z-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.div
+              variants={fadeUp}
+              className="inline-block bg-wood/10 px-4 py-2 rounded-full mb-6"
+            >
+              <span className="text-wood font-bold tracking-widest text-sm uppercase">
+                Stay on Track
+              </span>
+            </motion.div>
+            <motion.h2
+              variants={fadeUp}
+              className="text-4xl md:text-5xl font-heading font-black text-primary leading-tight mb-6"
+            >
+              Your Daily Mission, <br />
+              <span className="text-action">Always Visible.</span>
+            </motion.h2>
+            <motion.p
+              variants={fadeUp}
+              className="text-lg md:text-xl text-text-muted mb-8 max-w-2xl mx-auto lg:mx-0"
+            >
+              Building a study habit has never been easier. With gorgeous native
+              iOS widgets and perfectly timed push notifications, BrainGuin
+              ensures you never break your streak or miss a critical review.
+            </motion.p>
+
+            <motion.ul
+              variants={fadeUp}
+              className="space-y-4 mb-8 text-left max-w-sm mx-auto lg:mx-0"
+            >
+              <li className="flex items-center gap-3 text-text-main font-medium">
+                <div className="w-8 h-8 rounded-full bg-action/20 flex items-center justify-center flex-shrink-0">
+                  <BellRing size={16} className="text-action" />
+                </div>
+                Smart reminders based on your exam date
+              </li>
+              <li className="flex items-center gap-3 text-text-main font-medium">
+                <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                  <Zap size={16} className="text-accent" />
+                </div>
+                Live widget updates tracking your daily cards
+              </li>
+            </motion.ul>
+          </motion.div>
+
+          {/* Widget Phones Configuration */}
+          <motion.div
+            className="flex-1 relative w-full h-[500px] flex justify-center items-center"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Left Phone (Widget Screen) */}
+            <motion.div
+              animate={{ y: [0, -15, 0] }}
+              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+              className="absolute left-0 md:left-10 z-10 w-[240px]"
+            >
+              <Image
+                src="/images/5.png" // Assuming 1.jpg is your home screen with the streak/widget
+                alt="Widget Preview"
+                width={300}
+                height={600}
+              />
+            </motion.div>
+
+            {/* Right Phone (Notification/Lock Screen or alternate view) */}
+            <motion.div
+              animate={{ y: [0, 15, 0] }}
+              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+              className="absolute right-0 md:right-10 z-20 w-[260px] top-10"
+            >
+              <Image
+                src="/images/6.png"
+                alt="Notification Preview"
+                width={300}
+                height={600}
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -282,39 +370,29 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               {/* App Store Button Placeholder */}
-              <button className="bg-primary hover:bg-slate-800 text-white px-6 py-4 rounded-2xl font-body font-semibold flex items-center justify-center gap-3 transition-colors">
-                <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                  <path d="M16.365 21.43c-1.129.548-2.316.548-3.414-.02-.733-.377-1.463-.733-2.193-1.085-.828-.4-1.636-.372-2.456.033-.717.362-1.434.733-2.158 1.092-1.07.534-2.128.536-3.208-.035C.851 19.14-1.01 13.9.467 9.8c.844-2.344 2.45-3.83 4.908-4.225 1.341-.215 2.585.176 3.753.81 1.157.629 2.213.619 3.398.026 1.4-.702 2.85-1.012 4.385-.59 2.148.59 3.528 2.05 4.12 4.148-2.617 1.12-3.328 3.65-1.928 5.918 1.026 1.662 2.656 2.375 4.542 2.148-.718 2.015-1.956 3.66-3.524 4.805l.202.6zM15.422 5.09c-.19 2.278-1.944 4.103-4.254 4.195-.312-2.39 1.583-4.475 4.254-4.195z" />
-                </svg>
-                <div className="text-left">
-                  <div className="text-[10px] leading-tight opacity-80">
-                    Download on the
-                  </div>
-                  <div className="text-lg leading-tight font-bold">
-                    App Store
-                  </div>
-                </div>
-              </button>
-
-              {/* Play Store Button Placeholder */}
-              <button className="bg-primary hover:bg-slate-800 text-white px-6 py-4 rounded-2xl font-body font-semibold flex items-center justify-center gap-3 transition-colors">
-                <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                  <path d="M3.609 1.814L13.792 12 3.61 22.186c-.164-.176-.254-.428-.254-.725V2.54c0-.297.09-.549.253-.726zM4.686 1.114l10.155 5.86-1.577 1.578L4.686 1.114zm9.356 8.356L18.66 12l-4.618 2.53-1.556-1.556 1.556-1.556zm-.778 3.53l-8.578 4.945L12.06 14.5l1.204-1.5z" />
-                </svg>
-                <div className="text-left">
-                  <div className="text-[10px] leading-tight opacity-80">
-                    GET IT ON
-                  </div>
-                  <div className="text-lg leading-tight font-bold">
-                    Google Play
-                  </div>
-                </div>
-              </button>
+              <Link href={WEB_APP_URL} className="block self-center">
+                <Image
+                  src="/images/appstore.png"
+                  alt="App store Logo"
+                  width={240}
+                  height={80}
+                  className="object-contain"
+                />
+              </Link>
+              <Link href={WEB_APP_URL} className="block self-center">
+                <Image
+                  src="/images/googleplay.png"
+                  alt="Google play Logo"
+                  width={240}
+                  height={80}
+                  className="object-contain"
+                />
+              </Link>
             </div>
           </div>
           <div className="hidden md:block flex-shrink-0">
             <Image
-              src="/images/celebrator-penguin.png"
+              src="/images/celebrator.png"
               alt="Celebrate"
               width={250}
               height={250}
@@ -329,14 +407,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             <Image
-              src="/images/main-penguin.png"
-              alt="Logo"
-              width={30}
-              height={30}
+              src="/images/main.png"
+              alt="BrainGuin Logo"
+              width={40}
+              height={40}
+              className="object-contain"
             />
-            <span className="font-heading font-bold text-primary text-xl">
-              BrainGuin
-            </span>
+            <Image
+              src="/images/icon-text-light.png"
+              alt="BrainGuin"
+              width={90}
+              height={30}
+              className="object-contain"
+            />
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-text-muted">
             <a
