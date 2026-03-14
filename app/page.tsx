@@ -116,7 +116,7 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-            className="absolute left-0 md:left-10 z-10 w-[240px]"
+            className="lg:absolute left-0 md:left-10 z-10 w-[240px]"
           >
             <Image
               src="/images/2.png"
@@ -129,7 +129,7 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-            className="absolute right-0 md:right-10 z-20 w-[260px] top-10"
+            className="lg:absolute right-0 md:right-10 z-20 w-[260px] top-10"
           >
             <Image
               src="/images/3.png"
@@ -173,14 +173,14 @@ export default function Home() {
                   className="object-contain drop-shadow-xl"
                 />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 flex flex-col items-center md:items-start">
                 <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
                   <BookOpen size={28} className="text-accent" />
                 </div>
                 <h3 className="text-3xl font-heading font-bold text-primary mb-4">
                   Upload Anything. Literally.
                 </h3>
-                <p className="text-text-muted text-lg leading-relaxed">
+                <p className="text-text-muted text-lg leading-relaxed text-center md:text-left">
                   Got a massive 100-page PDF syllabus? A long Wikipedia article?
                   Or just a random topic like "Quantum Physics"? Paste it in,
                   and let our AI digest the entire thing instantly.
@@ -205,14 +205,14 @@ export default function Home() {
                   className="object-contain drop-shadow-xl"
                 />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 flex flex-col items-center md:items-start">
                 <div className="w-14 h-14 rounded-2xl bg-action/10 flex items-center justify-center mb-6">
                   <Zap size={28} className="text-action" />
                 </div>
                 <h3 className="text-3xl font-heading font-bold text-primary mb-4">
                   AI Extracts The Magic
                 </h3>
-                <p className="text-text-muted text-lg leading-relaxed">
+                <p className="text-text-muted text-lg leading-relaxed text-center md:text-left">
                   Our engine scans your document and automatically extracts the
                   highest-yield information, formatting it into a beautiful deck
                   of active-recall flashcards. Hours of note-taking saved.
@@ -237,14 +237,14 @@ export default function Home() {
                   className="object-contain drop-shadow-xl"
                 />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 flex flex-col items-center md:items-start">
                 <div className="w-14 h-14 rounded-2xl bg-status-easy/10 flex items-center justify-center mb-6">
                   <Brain size={28} className="text-status-easy" />
                 </div>
                 <h3 className="text-3xl font-heading font-bold text-primary mb-4">
                   Set Your Exam Deadline
                 </h3>
-                <p className="text-text-muted text-lg leading-relaxed">
+                <p className="text-text-muted text-lg leading-relaxed text-center md:text-left">
                   Tell BrainGuin when your test is. Our Spaced Repetition
                   algorithm will compress your daily study schedule, feeding you
                   exactly the cards you need to see today so you are 100%
@@ -321,7 +321,7 @@ export default function Home() {
             <motion.div
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              className="absolute left-0 md:left-10 z-10 w-[240px]"
+              className="lg:absolute left-0 md:left-10 z-10 w-[240px]"
             >
               <Image
                 src="/images/5.png" // Assuming 1.jpg is your home screen with the streak/widget
@@ -335,7 +335,7 @@ export default function Home() {
             <motion.div
               animate={{ y: [0, 15, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-              className="absolute right-0 md:right-10 z-20 w-[260px] top-10"
+              className="lg:absolute right-0 md:right-10 z-20 w-[260px] top-10"
             >
               <Image
                 src="/images/6.png"
