@@ -416,7 +416,7 @@ export default function Home() {
                 />
               </Link>
               <Link
-                href={WEB_APP_URL}
+                href="https://play.google.com/store/apps/details?id=com.brainguin.app&hl=en"
                 className="block self-center transition-transform hover:scale-105 hover:-translate-y-1"
               >
                 <Image
